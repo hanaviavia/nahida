@@ -4,6 +4,9 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 
+import MNavLinks from "./components/MNavLinks.vue";
+import MNavLink from "./components/MNavLink.vue";
+
 export default {
   extends: DefaultTheme,
   Layout: () => {
@@ -12,6 +15,7 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    // ...
+    app.component("MNavLinks", MNavLinks)
+    app.component("MNavLink", MNavLink)
   }
 } satisfies Theme

@@ -13,6 +13,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@mdit-vue/shared": "^2.1.2",
+    "sass": "^1.77.1",
     "vitepress": "^1.1.4",
     "vue": "^3.4.27"
   }
