@@ -3,10 +3,11 @@ import { computed } from 'vue'
 import { slugify } from '@mdit-vue/shared'
 
 import MNavLink from './MNavLink.vue'
-import type { NavLink } from '../types'
+import {NavLink, Target} from '../types'
 
 const props = defineProps<{
   title: string
+  target?: Target
   items: NavLink[]
 }>()
 
@@ -22,8 +23,9 @@ const formatTitle = computed(() => {
   </h2>
   <div class="m-nav-links">
     <MNavLink
-      v-for="{ icon, title, desc, link } in items"
+      v-for="{ icon, title, desc, link, target: itemTarget } in items"
       :key="link"
+      :target="target || itemTarget || '_blank'"
       :icon="icon"
       :title="title"
       :desc="desc"

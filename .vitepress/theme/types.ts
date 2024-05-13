@@ -1,3 +1,5 @@
+export type Target = '_blank' | '_self' | '_top';
+
 export interface NavLink {
   /** 站点图标 */
   icon?: string | { svg: string }
@@ -7,4 +9,7 @@ export interface NavLink {
   desc?: string
   /** 站点链接 */
   link: string
+  /** a标签 target */
+  target?: Target
 }
+

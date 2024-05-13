@@ -3,13 +3,14 @@ import { computed } from 'vue'
 import { withBase } from 'vitepress'
 import { slugify } from '@mdit-vue/shared'
 
-import { NavLink } from '../types'
+import {NavLink, Target} from '../types'
 
 const props = defineProps<{
   icon?: NavLink['icon']
   title?: NavLink['title']
   desc?: NavLink['desc']
   link: NavLink['link']
+  target?: Target
 }>()
 
 const formatTitle = computed(() => {
@@ -26,7 +27,7 @@ const svg = computed(() => {
 </script>
 
 <template>
-  <a v-if="link" class="nav-link" :href="link" target="_blank" rel="noreferrer">
+  <a v-if="link" class="m-nav-link" :href="link" :target="target" rel="noreferrer">
     <article class="box">
       <div class="box-header">
         <div v-if="svg" class="icon" v-html="svg"></div>
@@ -45,7 +46,7 @@ const svg = computed(() => {
 </template>
 
 <style lang="scss" scoped>
-.nav-link {
+.m-nav-link {
   --m-nav-icon-box-size: 40px;
   --m-nav-icon-size: 24px;
   --m-nav-box-gap: 12px;
@@ -122,7 +123,7 @@ const svg = computed(() => {
 }
 
 @media (max-width: 960px) {
-  .nav-link {
+  .m-nav-link {
     --m-nav-icon-box-size: 36px;
     --m-nav-icon-size: 20px;
     --m-nav-box-gap: 8px;

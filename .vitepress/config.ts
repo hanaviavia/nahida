@@ -9,18 +9,18 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Nav', link: '/nav/index' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Wiki', link: '/wiki/index' }
     ],
 
-    // sidebar: [
-    //   {
-    //     text: 'Examples',
-    //     items: [
-    //       { text: 'Markdown Examples', link: '/markdown-examples' },
-    //       { text: 'Runtime API Examples', link: '/api-examples' }
-    //     ]
-    //   }
-    // ],
+    sidebar: {
+      "/frontend/engineering": [
+        { text: '工程化',
+          items: [
+            { text: 'monorepo', link: '/frontend/engineering/monorepo.md' },
+          ]
+        },
+      ]
+    },
 
     /* 右侧大纲配置 */
     outline: {
