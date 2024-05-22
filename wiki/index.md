@@ -7,7 +7,7 @@ outline: [2, 3, 4]
 import { NAV_DATA } from './data'
 </script>
 
-# 导航
+# 知识库
 
 <MNavLinks v-for="{title, items} in NAV_DATA" target="_self" :title="title" :items="items"/>
 

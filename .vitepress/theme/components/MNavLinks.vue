@@ -25,7 +25,7 @@ const formatTitle = computed(() => {
     <MNavLink
       v-for="{ icon, title, desc, link, target: itemTarget } in items"
       :key="link"
-      :target="target || itemTarget || '_blank'"
+      :target="itemTarget || target || '_blank'"
       :icon="icon"
       :title="title"
       :desc="desc"
