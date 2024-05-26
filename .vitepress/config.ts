@@ -19,6 +19,13 @@ export default defineConfig({
             { text: 'monorepo', link: '/frontend/engineering/monorepo.md' },
           ]
         },
+      ],
+      "/skill/ruankao": [
+        { text: '软考',
+          items: [
+            { text: '架构师', link: '/skill/ruankao/architect.md' },
+          ]
+        },
       ]
     },
 

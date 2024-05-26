@@ -38,6 +38,13 @@ export const NAV_DATA: NavData[] = [
         link: 'https://www.zhihu.com/column/c_1732038372393218048',
         target: '_blank'
       },
+      {
+        icon: 'https://ts4.cn.mm.bing.net/th?id=ODLS.34774cc0-2689-44e7-9a1c-7896efe49de9&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2',
+        title: '软考',
+        desc: '国家级考试',
+        link: 'skill/ruankao/index',
+        target: '_blank'
+      },
     ],
-  },
+  }
 ]
