@@ -14,16 +14,30 @@ export default defineConfig({
 
     sidebar: {
       "/frontend/engineering": [
-        { text: '工程化',
+        {
+          text: '工程化',
           items: [
             { text: 'monorepo', link: '/frontend/engineering/monorepo.md' },
           ]
         },
       ],
       "/skill/ruankao": [
-        { text: '软考',
+        {
+          text: '软考',
           items: [
-            { text: '架构师', link: '/skill/ruankao/architect.md' },
+            {
+              text: '架构师',
+              items: [
+                {
+                  text: '导学',
+                  link: '/skill/ruankao/senior-software-architect/getting-start.md'
+                },
+                {
+                  text: '绪论',
+                  link: '/skill/ruankao/senior-software-architect/introduction.md'
+                }
+              ]
+            },
           ]
         },
       ]
