@@ -1,21 +1,21 @@
 // https://vitepress.dev/guide/custom-theme
-import { h } from 'vue'
-import type { Theme } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
-import './style.css'
+import { h } from "vue";
+import type { Theme } from "vitepress";
+import DefaultTheme from "vitepress/theme";
+import "./style.css";
 
-import MNavLinks from "./components/MNavLinks.vue";
-import MNavLink from "./components/MNavLink.vue";
+import { globals } from "./components";
 
 export default {
   extends: DefaultTheme,
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    })
+    });
   },
-  enhanceApp({ app, router, siteData }) {
-    app.component("MNavLinks", MNavLinks)
-    app.component("MNavLink", MNavLink)
-  }
-} satisfies Theme
+  enhanceApp({ app }) {
+    Object.keys(globals).forEach((key) => {
+      app.component(key, globals[key]);
+    });
+  },
+} satisfies Theme;
