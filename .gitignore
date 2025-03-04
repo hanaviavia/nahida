@@ -31,7 +31,7 @@ package-lock.json
 
 # user-specific files
 
-pnpm-lock.yaml
+# pnpm-lock.yaml
 
 #vitepress
 .vitepress/dist
