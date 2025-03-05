@@ -46,7 +46,7 @@ export const NAV_DATA: NavData[] = [
       },
       {
         icon: "https://ts4.cn.mm.bing.net/th?id=ODLS.34774cc0-2689-44e7-9a1c-7896efe49de9&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2",
-        title: "cpa",
+        title: "CPA",
         desc: "注册会计师考试",
         link: "/cpa/index",
       },
